@@ -11,6 +11,7 @@ class Solution:
             if grumpy[i]==1:
                 secret_window+=customers[i]
         max_cust=secret_window
+        
         for j in range(1,(len(grumpy)-minutes)+1):
             if grumpy[j-1]==1:
                 secret_window-=customers[j-1]
