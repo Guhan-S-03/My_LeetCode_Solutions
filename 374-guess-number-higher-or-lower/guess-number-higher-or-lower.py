@@ -7,13 +7,16 @@
 
 class Solution:
     def guessNumber(self, n: int) -> int:
-        l,h=1,n
-        while l<h:
-            mid=(l+h)//2
-            if(guess(mid)==1):
+        l,r=1,n
+        while True:
+            mid=(l+r)//2
+            res=guess(mid)
+            if res==-1:
+                r=mid-1
+            elif res==1:
                 l=mid+1
             else:
-                h=mid
-        return l
+                return mid
+
 
         
