@@ -5,12 +5,8 @@ class Solution:
 
         while i<len(s):
             if s[i]=='X':
-                if i+1<len(s) and i+2<len(s):
-                    i+=3
-                    min_moves+=1
-                else:
-                    min_moves+=1
-                    return min_moves
+                i+=3
+                min_moves+=1
             else:
                 i+=1
         return min_moves
