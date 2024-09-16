@@ -16,5 +16,7 @@ class Solution:
             prev=tp_to_min(timePoints[i])
             diff=cur-prev
             res=min(res,diff)
+            if res==0:##diff between two same times
+                return 0
         return res
         
